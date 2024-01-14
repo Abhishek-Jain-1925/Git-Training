@@ -1,1 +1,14 @@
 Question No.05
+
+
+
+Difference Between push --force and push --force-with-lease is as follows - 
+
+1.Both --force and --force-with-lease are options used with the git push command,but just difference is with safety.
+
+2.push --force option allows us to forcefully push local changes to remote repository, even if it results in overwriting or deleting commits on the remote branch,
+          but, In case of --force-with-lease, it ensures that you only force push if the remote branch expected state matches the local branch
+
+3.eg. - git push origin main --force     AND    git push origin main --force-with-lease
+
+In short, push --force-with-lease is the safe mechanism to push our code on Remote Repo.
