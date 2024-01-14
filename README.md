@@ -1,6 +1,6 @@
 # Git-Training
 
-## Git Basics - Assignment No.1
+## Git Advanced - Assignment No.2
 
 Used Commands to Perform Mentioned Task are as Follows-
 1) git init - To Initialize Repository/Directory.
@@ -19,17 +19,14 @@ Used Commands to Perform Mentioned Task are as Follows-
 11) git log - To get List of Commits on Particular Branch.
 12) git reset --soft HEAD~1 - To Revert the Changes in File which was Committed and put that file in Staged Area.
 13) git reset --hard HEAD~1 - To Revert the Changes of File Pemanantly.
-14) git stash - To Save file locally on Machine.
-15) git remote add origin URL_TO_LINK - To Remotely Connect with Certain Repo.
-16) git diff OTHER_BRANCH_NAME - To Compare Currently Working Branch with Other Branch.
-17) git push WHERE WHOM - eg. git push origin main => To Push Certain Branch to the Repo.
-18) git show COMMIT_ID - To Get Details of Commit by Its Unique ID.
-    eg. git show 5f776d50127bf6cff847b9945742aa636f33e92e
-20) vi file1.txt - To create File and open it in Terminal.
-21) git stash list - To get list of stashed changes.
-22) ls - To List the Files and Subdiectories.
-23) git branch -D BRANCH_NAME - Forcefully Delete branch locally.
-24) git branch -d BRANCH_NAME - locally delete unmerged file.
+14) git remote add origin URL_TO_LINK - To Remotely Connect with Certain Repo.
+15) git push WHERE WHOM - eg. git push origin main => To Push Certain Branch to the Repo.
+16) vi file1.txt - To create File and open it in Terminal.
+17) git cherry-pick COMMIT_ID - To pick any particular or multiple commits in our branch from other branch.
+18) git merge <br_name> - To merge any branch to particular branch.
+19) git pull - To get changes from given repo to local.
+20) git rebase - To merge changes without adding any commit to log and without disturbing main branch.
+>>>>>>> 4ecfb85 (Create README.md)
 
 Above Commands Handled and Shown on Repo- 
 https://github.com/Abhishek-Jain-1925/Git-Training
