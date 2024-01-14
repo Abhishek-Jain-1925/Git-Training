@@ -28,5 +28,4 @@ Used Commands to Perform Mentioned Task are as Follows-
 20) git rebase - To merge changes without adding any commit to log and without disturbing main branch.
 >>>>>>> 4ecfb85 (Create README.md)
 
-Above Commands Handled and Shown on Repo- 
-https://github.com/Abhishek-Jain-1925/Git-Training
+Above Commands Handled and Shown on Repo- https://github.com/Abhishek-Jain-1925/Git-Training/tree/abhishek
