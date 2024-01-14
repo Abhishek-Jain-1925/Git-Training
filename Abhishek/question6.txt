@@ -1,0 +1,9 @@
+Question No.06
+
+To Unstage changes from Staged Area we have following Options-
+
+1.Unstage one or top Changes Permanantly -
+	'git reset --soft HEAD~1 or <file_name>'
+
+2.Unstage multiple changes permanantly - 
+	'git reset --soft HEAD~COUNT' or 'git reset HEAD .'
