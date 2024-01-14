@@ -1,0 +1,15 @@
+Question No.02
+
+Following are the steps to set multiple remote repositories for the same project - 
+
+1.Need to check whether that repo already added or just fir sake for info. by command 'git remote -v'.
+2.Add remote repo locally by command git remote add <name> <link_of_repo>
+3.check whether it was added by command 'git remote -v'.
+4.then do pull all changes firstly that we want by command , 'git pull <repo_name> <br_name>
+5.then do push all changes we are going to makein project by command 'git push <repo_name> <br_name>
+6.Check changes side by side accordingly.
+
+
+Real Time SnapShot Taken by me, That is as follows-
+
+
