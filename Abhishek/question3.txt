@@ -1,0 +1,194 @@
+Question No.03
+
+
+To Combine two Commits into one commit, It's Demonstration is as follows -
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git pull origin abhishek
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 8 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (8/8), 2.97 KiB | 10.00 KiB/s, done.
+From https://github.com/Abhishek-Jain-1925/Git-Training
+ * branch            abhishek   -> FETCH_HEAD
+   d450de6..db6d780  abhishek   -> origin/abhishek
+Merge made by the 'ort' strategy.
+ Abhishek/question2.txt | 91 +++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 90 insertions(+), 1 deletion(-)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 912 bytes | 456.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+   db6d780..3abe15c  abhishek -> abhishek
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi file1.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add file1.txt
+warning: in the working copy of 'Abhishek/file1.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "File 1"
+[abhishek b4187e6] File 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Abhishek/file1.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi file2.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add .
+warning: in the working copy of 'Abhishek/file2.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "File 2"
+[abhishek 6c4fdd0] File 2
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Abhishek/file2.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi file3.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add .
+warning: in the working copy of 'Abhishek/file3.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "File 3"
+[abhishek acae08e] File 3
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Abhishek/file3.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi file4.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add file4.txt
+warning: in the working copy of 'Abhishek/file4.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "File 4"
+[abhishek b5bbc92] File 4
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Abhishek/file4.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git log
+commit b5bbc92518fba4c6d5bbea8c9c235ce84b3fb039 (HEAD -> abhishek)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:13:34 2024 +0530
+
+    File 4
+
+commit acae08e81d919e2fb0406c9f0b367499e4361719
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:13:05 2024 +0530
+
+    File 3
+
+commit 6c4fdd0fddd36d707436c8f2c23f4d36ffae7890
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:12:43 2024 +0530
+
+    File 2
+
+commit b4187e68a1f6da85cc982a47a78a426cc2d0374b
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:12:13 2024 +0530
+
+    File 1
+
+commit 3abe15c2b75b74c320134ea20c11845a42745448 (origin/abhishek)
+Merge: 1cfa98f db6d780
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:09:56 2024 +0530
+
+    Merge branch 'abhishek' of https://github.com/Abhishek-Jain-1925/Git-Training into abhishek
+
+commit 1cfa98fe18215dae25ffd9099e8a0c9584ef5f16
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:09:24 2024 +0530
+
+    Add File New question3.txt
+
+commit db6d780c58c2b2ad63363f710131d58b8614c9bb
+Author: Abhishek Dhondalkar <129784079+Abhishek-Jain-1925@users.noreply.github.com>
+Date:   Sun Jan 14 21:59:23 2024 +0530
+
+    Update File question2.txt on branch abhishek
+
+commit 186793929173713e346db554d1f4ec1fe19f2298
+Author: Abhishek Dhondalkar <129784079+Abhishek-Jain-1925@users.noreply.github.com>
+Date:   Sun Jan 14 21:04:19 2024 +0530
+
+    Update File question2.txt
+
+
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git rebase -i HEAD~4
+[detached HEAD 0a939e2] Combination of Two Commmits - File2 and File3
+ Date: Sun Jan 14 22:12:43 2024 +0530
+ 2 files changed, 2 insertions(+)
+ create mode 100644 Abhishek/file2.txt
+ create mode 100644 Abhishek/file3.txt
+Successfully rebased and updated refs/heads/abhishek.
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git log
+commit 1fad2fb6427d46f11ef5fbdb54f166312cb3a2ce (HEAD -> abhishek)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:13:34 2024 +0530
+
+    File 4
+
+commit 0a939e2f06880744ee706ba1ee709e35aa0cf360
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:12:43 2024 +0530
+
+    Combination of Two Commmits - File2 and File3
+
+commit b4187e68a1f6da85cc982a47a78a426cc2d0374b
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:12:13 2024 +0530
+
+    File 1
+
+commit 3abe15c2b75b74c320134ea20c11845a42745448 (origin/abhishek)
+Merge: 1cfa98f db6d780
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:09:56 2024 +0530
+
+    Merge branch 'abhishek' of https://github.com/Abhishek-Jain-1925/Git-Training into abhishek
+
+commit 1cfa98fe18215dae25ffd9099e8a0c9584ef5f16
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:09:24 2024 +0530
+
+    Add File New question3.txt
+
+commit db6d780c58c2b2ad63363f710131d58b8614c9bb
+Author: Abhishek Dhondalkar <129784079+Abhishek-Jain-1925@users.noreply.github.com>
+Date:   Sun Jan 14 21:59:23 2024 +0530
+
+    Update File question2.txt on branch abhishek
+
+commit 186793929173713e346db554d1f4ec1fe19f2298
+Author: Abhishek Dhondalkar <129784079+Abhishek-Jain-1925@users.noreply.github.com>
+Date:   Sun Jan 14 21:04:19 2024 +0530
+
+    Update File question2.txt
+
+commit d450de6afd59e13d03547dc98e8b9c82b240dd28
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 20:53:46 2024 +0530
+
+    Add New File question2.txt

@@ -1,0 +1,15 @@
+Question No.04
+
+To delete one commit or multiple commits permanently following are the stpes-
+
+1.To Delete last/Top commit Permanantly-
+  'git reset --hard HEAD~1'
+
+2.To Delete any One Particular commit Permanantly having position 'n' -
+  'git reset --hard HEAD~n'
+
+3.To Delete any Many commits from top Permanantly -
+  'git reset --hard HEAD~COUNT'
+
+4.To Delete any Particular Commit Permanantly- 
+  'git revert <commit_ID> <commit_ID>'

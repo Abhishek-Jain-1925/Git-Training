@@ -1,0 +1,820 @@
+abhis@DESKTOP-MPRLD9G MINGW64 ~
+$ cd F:/Git-Training
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (main)
+$ git checkout -b abhishek
+Switched to a new branch 'abhishek'
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ vi Demo-File.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git add .
+warning: in the working copy of 'Demo-File.txt', LF will be replaced by CRLF the next time Git touches it
+git
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git commit -m "Add New File Demo"
+[abhishek 41a6e7a] Add New File Demo
+ 2 files changed, 462 insertions(+)
+ create mode 100644 Demo-File.txt
+ create mode 100644 Snapshot of Git Assignment-1.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git push origin abhishek
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 2.73 KiB | 1.37 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'abhishek' on GitHub by visiting:
+remote:      https://github.com/Abhishek-Jain-1925/Git-Training/pull/new/abhishek
+remote:
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+ * [new branch]      abhishek -> abhishek
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git log
+commit 41a6e7a7f0bb8afdb6a25b8c6e898b13f1059abd (HEAD -> abhishek, origin/abhishek)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 19:56:12 2024 +0530
+
+    Add New File Demo
+
+commit 04edef38bde3889d56c008080b79ac74dbb3a3c4 (main)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:45:42 2024 +0530
+
+    Update file fc.txt
+
+commit acb6bbd7ea0439991884eeb515711887d4120d73
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:34:33 2024 +0530
+
+    Add New File fc.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ ^C
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git revert 41a6e7a7f0bb8afdb6a25b8c6e898b13f1059abd
+[abhishek c76b5a1] Revert "Add New File Demo"
+ 2 files changed, 462 deletions(-)
+ delete mode 100644 Demo-File.txt
+ delete mode 100644 Snapshot of Git Assignment-1.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git log
+commit c76b5a19d4e541c5dc563a84014a3434cf70b259 (HEAD -> abhishek)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 19:57:55 2024 +0530
+
+    Revert "Add New File Demo"
+
+    This reverts commit 41a6e7a7f0bb8afdb6a25b8c6e898b13f1059abd.
+
+commit 41a6e7a7f0bb8afdb6a25b8c6e898b13f1059abd (origin/abhishek)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 19:56:12 2024 +0530
+
+    Add New File Demo
+
+commit 04edef38bde3889d56c008080b79ac74dbb3a3c4 (main)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:45:42 2024 +0530
+
+    Update file fc.txt
+
+commit acb6bbd7ea0439991884eeb515711887d4120d73
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:34:33 2024 +0530
+
+    Add New File fc.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git status
+On branch abhishek
+nothing to commit, working tree clean
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git push origin abhishek
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (2/2), 273 bytes | 273.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+   41a6e7a..c76b5a1  abhishek -> abhishek
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ ^C
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git log
+commit c76b5a19d4e541c5dc563a84014a3434cf70b259 (HEAD -> abhishek, origin/abhishek)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 19:57:55 2024 +0530
+
+    Revert "Add New File Demo"
+
+    This reverts commit 41a6e7a7f0bb8afdb6a25b8c6e898b13f1059abd.
+
+commit 41a6e7a7f0bb8afdb6a25b8c6e898b13f1059abd
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 19:56:12 2024 +0530
+
+    Add New File Demo
+
+commit 04edef38bde3889d56c008080b79ac74dbb3a3c4 (main)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:45:42 2024 +0530
+
+    Update file fc.txt
+
+commit acb6bbd7ea0439991884eeb515711887d4120d73
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:34:33 2024 +0530
+
+    Add New File fc.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git checkout feature2
+Switched to a new branch 'feature2'
+branch 'feature2' set up to track 'origin/feature2'.
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (feature2)
+$ git lof
+git: 'lof' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (feature2)
+$ git checkout abhishek
+Switched to branch 'abhishek'
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git checkout feature2
+Switched to branch 'feature2'
+Your branch is up to date with 'origin/feature2'.
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (feature2)
+$ git log
+commit b1b940a0267841ae3ad1710902567e502f061a8e (HEAD -> feature2, origin/feature2)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:59:32 2024 +0530
+
+    Add New File feature2-file1.txt
+
+commit 38801f162d302049b8e445bbc5827b2c41b0c5f9
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:47:19 2024 +0530
+
+    Add New File feature2-file.txt
+
+commit 04edef38bde3889d56c008080b79ac74dbb3a3c4 (main)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:45:42 2024 +0530
+
+    Update file fc.txt
+
+commit acb6bbd7ea0439991884eeb515711887d4120d73
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:34:33 2024 +0530
+
+    Add New File fc.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (feature2)
+$ ^C
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (feature2)
+$ git checkout abhishek
+Switched to branch 'abhishek'
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git cherry-pick  38801f162d302049b8e445bbc5827b2c41b0c5f9
+[abhishek 3c30cea] Add New File feature2-file.txt
+ Date: Sun Jan 14 18:47:19 2024 +0530
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature2-file.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git log
+commit 3c30cea03d96b301d9c152f0a6587c0a15ffd690 (HEAD -> abhishek)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:47:19 2024 +0530
+
+    Add New File feature2-file.txt
+
+commit c76b5a19d4e541c5dc563a84014a3434cf70b259 (origin/abhishek)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 19:57:55 2024 +0530
+
+    Revert "Add New File Demo"
+
+    This reverts commit 41a6e7a7f0bb8afdb6a25b8c6e898b13f1059abd.
+
+commit 41a6e7a7f0bb8afdb6a25b8c6e898b13f1059abd
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 19:56:12 2024 +0530
+
+    Add New File Demo
+
+commit 04edef38bde3889d56c008080b79ac74dbb3a3c4 (main)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:45:42 2024 +0530
+
+    Update file fc.txt
+
+commit acb6bbd7ea0439991884eeb515711887d4120d73
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:34:33 2024 +0530
+
+    Add New File fc.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ ^C
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ mkdir Abhishek
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ cd F:/Git-Training/Abhishek
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi question1.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add .
+warning: in the working copy of 'Abhishek/question1.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "Add New File 'Abhishek/question1.txt'"
+[abhishek f2439f0] Add New File 'Abhishek/question1.txt'
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Abhishek/question1.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 722 bytes | 361.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+   c76b5a1..f2439f0  abhishek -> abhishek
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi question2.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git remote -v
+origin  https://github.com/Abhishek-Jain-1925/Git-Training.git (fetch)
+origin  https://github.com/Abhishek-Jain-1925/Git-Training.git (push)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git remote add origin1 https://github.com/Abhishek-Jain-1925/Practice.git
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git remote -v
+origin  https://github.com/Abhishek-Jain-1925/Git-Training.git (fetch)
+origin  https://github.com/Abhishek-Jain-1925/Git-Training.git (push)
+origin1 https://github.com/Abhishek-Jain-1925/Practice.git (fetch)
+origin1 https://github.com/Abhishek-Jain-1925/Practice.git (push)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+ ! [rejected]        abhishek -> abhishek (fetch first)
+error: failed to push some refs to 'https://github.com/Abhishek-Jain-1925/Git-Training.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git pull origin abhishek
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.96 KiB | 13.00 KiB/s, done.
+From https://github.com/Abhishek-Jain-1925/Git-Training
+ * branch            abhishek   -> FETCH_HEAD
+   f2439f0..c879d7c  abhishek   -> origin/abhishek
+Updating f2439f0..c879d7c
+Fast-forward
+ Abhishek/question1.txt | 101 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 101 insertions(+)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+Everything up-to-date
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git fetch --all
+Fetching origin
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), 2.71 KiB | 10.00 KiB/s, done.
+From https://github.com/Abhishek-Jain-1925/Git-Training
+   330b361..96b0c00  main       -> origin/main
+Fetching origin1
+remote: Enumerating objects: 31, done.
+remote: Counting objects: 100% (31/31), done.
+remote: Compressing objects: 100% (27/27), done.
+remote: Total 31 (delta 6), reused 15 (delta 1), pack-reused 0
+Unpacking objects: 100% (31/31), 7.67 KiB | 6.00 KiB/s, done.
+From https://github.com/Abhishek-Jain-1925/Practice
+ * [new branch]      branch1    -> origin1/branch1
+ * [new branch]      branch2    -> origin1/branch2
+ * [new branch]      main       -> origin1/main
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git remote remove origin1
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git remote -v
+origin  https://github.com/Abhishek-Jain-1925/Git-Training.git (fetch)
+origin  https://github.com/Abhishek-Jain-1925/Git-Training.git (push)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ ^C
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi question2.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git status
+On branch abhishek
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        question2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add .
+warning: in the working copy of 'Abhishek/question2.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "Add New File question2.txt"
+[abhishek d450de6] Add New File question2.txt
+ 1 file changed, 15 insertions(+)
+ create mode 100644 Abhishek/question2.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 742 bytes | 742.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+   c879d7c..d450de6  abhishek -> abhishek
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi question3.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git status
+On branch abhishek
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        question3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add .
+warning: in the working copy of 'Abhishek/question3.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "Add File New question3.txt"
+[abhishek 1cfa98f] Add File New question3.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Abhishek/question3.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+ ! [rejected]        abhishek -> abhishek (fetch first)
+error: failed to push some refs to 'https://github.com/Abhishek-Jain-1925/Git-Training.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git pull origin abhishek
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 8 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (8/8), 2.97 KiB | 10.00 KiB/s, done.
+From https://github.com/Abhishek-Jain-1925/Git-Training
+ * branch            abhishek   -> FETCH_HEAD
+   d450de6..db6d780  abhishek   -> origin/abhishek
+Merge made by the 'ort' strategy.
+ Abhishek/question2.txt | 91 +++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 90 insertions(+), 1 deletion(-)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 912 bytes | 456.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+   db6d780..3abe15c  abhishek -> abhishek
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi file1.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add file1.txt
+warning: in the working copy of 'Abhishek/file1.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "File 1"
+[abhishek b4187e6] File 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Abhishek/file1.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi file2.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add .
+warning: in the working copy of 'Abhishek/file2.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "File 2"
+[abhishek 6c4fdd0] File 2
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Abhishek/file2.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi file3.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add .
+warning: in the working copy of 'Abhishek/file3.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "File 3"
+[abhishek acae08e] File 3
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Abhishek/file3.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi file4.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add file4.txt
+warning: in the working copy of 'Abhishek/file4.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "File 4"
+[abhishek b5bbc92] File 4
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Abhishek/file4.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git log
+commit b5bbc92518fba4c6d5bbea8c9c235ce84b3fb039 (HEAD -> abhishek)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:13:34 2024 +0530
+
+    File 4
+
+commit acae08e81d919e2fb0406c9f0b367499e4361719
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:13:05 2024 +0530
+
+    File 3
+
+commit 6c4fdd0fddd36d707436c8f2c23f4d36ffae7890
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:12:43 2024 +0530
+
+    File 2
+
+commit b4187e68a1f6da85cc982a47a78a426cc2d0374b
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:12:13 2024 +0530
+
+    File 1
+
+commit 3abe15c2b75b74c320134ea20c11845a42745448 (origin/abhishek)
+Merge: 1cfa98f db6d780
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:09:56 2024 +0530
+
+    Merge branch 'abhishek' of https://github.com/Abhishek-Jain-1925/Git-Training into abhishek
+
+commit 1cfa98fe18215dae25ffd9099e8a0c9584ef5f16
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:09:24 2024 +0530
+
+    Add File New question3.txt
+
+commit db6d780c58c2b2ad63363f710131d58b8614c9bb
+Author: Abhishek Dhondalkar <129784079+Abhishek-Jain-1925@users.noreply.github.com>
+Date:   Sun Jan 14 21:59:23 2024 +0530
+
+    Update File question2.txt on branch abhishek
+
+commit 186793929173713e346db554d1f4ec1fe19f2298
+Author: Abhishek Dhondalkar <129784079+Abhishek-Jain-1925@users.noreply.github.com>
+Date:   Sun Jan 14 21:04:19 2024 +0530
+
+    Update File question2.txt
+
+
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git rebase -i HEAD~4
+[detached HEAD 0a939e2] Combination of Two Commmits - File2 and File3
+ Date: Sun Jan 14 22:12:43 2024 +0530
+ 2 files changed, 2 insertions(+)
+ create mode 100644 Abhishek/file2.txt
+ create mode 100644 Abhishek/file3.txt
+Successfully rebased and updated refs/heads/abhishek.
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git log
+commit 1fad2fb6427d46f11ef5fbdb54f166312cb3a2ce (HEAD -> abhishek)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:13:34 2024 +0530
+
+    File 4
+
+commit 0a939e2f06880744ee706ba1ee709e35aa0cf360
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:12:43 2024 +0530
+
+    Combination of Two Commmits - File2 and File3
+
+commit b4187e68a1f6da85cc982a47a78a426cc2d0374b
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:12:13 2024 +0530
+
+    File 1
+
+commit 3abe15c2b75b74c320134ea20c11845a42745448 (origin/abhishek)
+Merge: 1cfa98f db6d780
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:09:56 2024 +0530
+
+    Merge branch 'abhishek' of https://github.com/Abhishek-Jain-1925/Git-Training into abhishek
+
+commit 1cfa98fe18215dae25ffd9099e8a0c9584ef5f16
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 22:09:24 2024 +0530
+
+    Add File New question3.txt
+
+commit db6d780c58c2b2ad63363f710131d58b8614c9bb
+Author: Abhishek Dhondalkar <129784079+Abhishek-Jain-1925@users.noreply.github.com>
+Date:   Sun Jan 14 21:59:23 2024 +0530
+
+    Update File question2.txt on branch abhishek
+
+commit 186793929173713e346db554d1f4ec1fe19f2298
+Author: Abhishek Dhondalkar <129784079+Abhishek-Jain-1925@users.noreply.github.com>
+Date:   Sun Jan 14 21:04:19 2024 +0530
+
+    Update File question2.txt
+
+commit d450de6afd59e13d03547dc98e8b9c82b240dd28
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 20:53:46 2024 +0530
+
+    Add New File question2.txt
+
+
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ ^C
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi question4.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git pull origin abhishek
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 2.14 KiB | 15.00 KiB/s, done.
+From https://github.com/Abhishek-Jain-1925/Git-Training
+ * branch            abhishek   -> FETCH_HEAD
+   3abe15c..594a843  abhishek   -> origin/abhishek
+Merge made by the 'ort' strategy.
+ Abhishek/question3.txt | 193 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 193 insertions(+)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin main
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Abhishek-Jain-1925/Git-Training.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (16/16), 1.56 KiB | 398.00 KiB/s, done.
+Total 16 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+   594a843..a14f62c  abhishek -> abhishek
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git status
+On branch abhishek
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        question4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add .
+warning: in the working copy of 'Abhishek/question4.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "Add New File question4.txt"
+[abhishek b4a0e16] Add New File question4.txt
+ 1 file changed, 2 insertions(+)
+ create mode 100644 Abhishek/question4.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 430 bytes | 430.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+   a14f62c..b4a0e16  abhishek -> abhishek
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi question5.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git status
+On branch abhishek
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        question5.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git add .
+warning: in the working copy of 'Abhishek/question5.txt', LF will be replaced by CRLF the next time Git touches it
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git commit -m "Add New File question5.txt"
+[abhishek ea8a3ff] Add New File question5.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Abhishek/question5.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git pull origin abhishek
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 989 bytes | 7.00 KiB/s, done.
+From https://github.com/Abhishek-Jain-1925/Git-Training
+ * branch            abhishek   -> FETCH_HEAD
+   b4a0e16..69fd6a9  abhishek   -> origin/abhishek
+Merge made by the 'ort' strategy.
+ Abhishek/question4.txt | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 829 bytes | 414.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+   69fd6a9..4ceeae2  abhishek -> abhishek
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi question5.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi question5.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git pull origin abhishek
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.09 KiB | 6.00 KiB/s, done.
+From https://github.com/Abhishek-Jain-1925/Git-Training
+ * branch            abhishek   -> FETCH_HEAD
+   4ceeae2..f202507  abhishek   -> origin/abhishek
+error: Your local changes to the following files would be overwritten by merge:
+        Abhishek/question5.txt
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 4ceeae2..f202507
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+ ! [rejected]        abhishek -> abhishek (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Abhishek-Jain-1925/Git-Training.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+ ! [rejected]        abhishek -> abhishek (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Abhishek-Jain-1925/Git-Training.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git pull origin abhishek
+From https://github.com/Abhishek-Jain-1925/Git-Training
+ * branch            abhishek   -> FETCH_HEAD
+error: Your local changes to the following files would be overwritten by merge:
+        Abhishek/question5.txt
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 4ceeae2..f202507
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi question6.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ vi question6.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek|MERGING)
+$ vi question5.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek|MERGING)
+$ git add .
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek|MERGING)
+$ git status
+On branch abhishek
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   question5.txt
+
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek|MERGING)
+$ git commit -m "Update File question5.txt"
+[abhishek a4246b3] Update File question5.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 1.04 KiB | 531.00 KiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+   f202507..a4246b3  abhishek -> abhishek
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$

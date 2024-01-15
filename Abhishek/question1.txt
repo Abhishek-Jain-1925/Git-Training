@@ -1,0 +1,102 @@
+Question No.01
+
+Cherry-Pick =>
+
+  Cherry-pick is the tool of git which allows user to pick or transfer any particular commit from a particular branch to any other branch by specifying commitID that we want to transfer.
+Basically, We can use the above command when we dont want to merge any whole branch but want any particular commit from that branch then in this scenario, cherry-pick will be used.
+- Command => git cherry-pick COMMIT_ID
+- eg. git cherry-pick  acb6bbd7ea0439991884eeb515711887d4120d73
+Above Command will helps us to get above mentioned Commit in your branch.
+But, The branch from which we want to get any particular commit that must be present on our system locally, if it not so then we have to fetch that particular branch.
+It's actually incredibly useful to be able to "copy" a commit from one branch to another, without having to do a merge, and without having to manually redo all the edits.
+
+
+
+It's UseCase =>
+  Cherry-pick is just like We have a Cake with us, from that just picking cherry from the top and place to on other cake or wherever we want !! so like was, When we want any particular commit
+from other branch we can just pick that commit by its unique ID then copy it in our branch.
+
+
+
+Below mentioned are the steps to do cherry-pick for any particular commmit-
+
+*****************************************************************************************************************************************
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git checkout feature2
+Switched to branch 'feature2'
+Your branch is up to date with 'origin/feature2'.
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (feature2)
+$ git log
+commit b1b940a0267841ae3ad1710902567e502f061a8e (HEAD -> feature2, origin/feature2)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:59:32 2024 +0530
+
+    Add New File feature2-file1.txt
+
+commit 38801f162d302049b8e445bbc5827b2c41b0c5f9
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:47:19 2024 +0530
+
+    Add New File feature2-file.txt
+
+commit 04edef38bde3889d56c008080b79ac74dbb3a3c4 (main)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:45:42 2024 +0530
+
+    Update file fc.txt
+
+commit acb6bbd7ea0439991884eeb515711887d4120d73
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:34:33 2024 +0530
+
+    Add New File fc.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (feature2)
+$ ^C
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (feature2)
+$ git checkout abhishek
+Switched to branch 'abhishek'
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git cherry-pick  38801f162d302049b8e445bbc5827b2c41b0c5f9
+[abhishek 3c30cea] Add New File feature2-file.txt
+ Date: Sun Jan 14 18:47:19 2024 +0530
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature2-file.txt
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training (abhishek)
+$ git log
+commit 3c30cea03d96b301d9c152f0a6587c0a15ffd690 (HEAD -> abhishek)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:47:19 2024 +0530
+
+    Add New File feature2-file.txt
+
+commit c76b5a19d4e541c5dc563a84014a3434cf70b259 (origin/abhishek)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 19:57:55 2024 +0530
+
+    Revert "Add New File Demo"
+
+    This reverts commit 41a6e7a7f0bb8afdb6a25b8c6e898b13f1059abd.
+
+commit 41a6e7a7f0bb8afdb6a25b8c6e898b13f1059abd
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 19:56:12 2024 +0530
+
+    Add New File Demo
+
+commit 04edef38bde3889d56c008080b79ac74dbb3a3c4 (main)
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:45:42 2024 +0530
+
+    Update file fc.txt
+
+commit acb6bbd7ea0439991884eeb515711887d4120d73
+Author: abhishek-jain-1925 <jainabhishek1925@gmail.com>
+Date:   Sun Jan 14 18:34:33 2024 +0530
+
+    Add New File fc.txt
+*****************************************************************************************************************************************

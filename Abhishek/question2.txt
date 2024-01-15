@@ -1,0 +1,104 @@
+Question No.02
+
+Following are the steps to set multiple remote repositories for the same project - 
+
+1.Need to check whether that repo already added or just fir sake for info. by command 'git remote -v'.
+2.Add remote repo locally by command git remote add <name> <link_of_repo>
+3.check whether it was added by command 'git remote -v'.
+4.then do pull all changes firstly that we want by command , 'git pull <repo_name> <br_name>
+5.then do push all changes we are going to makein project by command 'git push <repo_name> <br_name>
+6.Check changes side by side accordingly.
+
+
+Working Demo SnapShot Taken by me, That is as follows-
+
+*************************************************************************************************************
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git remote -v
+origin  https://github.com/Abhishek-Jain-1925/Git-Training.git (fetch)
+origin  https://github.com/Abhishek-Jain-1925/Git-Training.git (push)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git remote add origin1 https://github.com/Abhishek-Jain-1925/Practice.git
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git remote -v
+origin  https://github.com/Abhishek-Jain-1925/Git-Training.git (fetch)
+origin  https://github.com/Abhishek-Jain-1925/Git-Training.git (push)
+origin1 https://github.com/Abhishek-Jain-1925/Practice.git (fetch)
+origin1 https://github.com/Abhishek-Jain-1925/Practice.git (push)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+To https://github.com/Abhishek-Jain-1925/Git-Training.git
+ ! [rejected]        abhishek -> abhishek (fetch first)
+error: failed to push some refs to 'https://github.com/Abhishek-Jain-1925/Git-Training.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git pull origin abhishek
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.96 KiB | 13.00 KiB/s, done.
+From https://github.com/Abhishek-Jain-1925/Git-Training
+ * branch            abhishek   -> FETCH_HEAD
+   f2439f0..c879d7c  abhishek   -> origin/abhishek
+Updating f2439f0..c879d7c
+Fast-forward
+ Abhishek/question1.txt | 101 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 101 insertions(+)
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git push origin abhishek
+Everything up-to-date
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git fetch --all
+Fetching origin
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), 2.71 KiB | 10.00 KiB/s, done.
+From https://github.com/Abhishek-Jain-1925/Git-Training
+   330b361..96b0c00  main       -> origin/main
+Fetching origin1
+remote: Enumerating objects: 31, done.
+remote: Counting objects: 100% (31/31), done.
+remote: Compressing objects: 100% (27/27), done.
+remote: Total 31 (delta 6), reused 15 (delta 1), pack-reused 0
+Unpacking objects: 100% (31/31), 7.67 KiB | 6.00 KiB/s, done.
+From https://github.com/Abhishek-Jain-1925/Practice
+ * [new branch]      branch1    -> origin1/branch1
+ * [new branch]      branch2    -> origin1/branch2
+ * [new branch]      main       -> origin1/main
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git remote remove origin1
+
+abhis@DESKTOP-MPRLD9G MINGW64 /f/Git-Training/Abhishek (abhishek)
+$ git remote -v
+origin  https://github.com/Abhishek-Jain-1925/Git-Training.git (fetch)
+origin  https://github.com/Abhishek-Jain-1925/Git-Training.git (push)
+
+*************************************************************************************************************
+
+
+
+
+Usecase of Above Scenario - 
+
+1.Collaboration with Different Teams:
+If different teams are working on different aspects of a project, each team can have its own remote repository. This allows teams to work independently and then merge their changes into a shared repository when ready.
+
+2.Backup and Redundancy:
+Maintaining a backup remote repository provides an additional layer of redundancy. If the primary remote server goes down or faces issues, you can switch to the backup repository to continue development without losing work.
+
+3.Integration with Different Services:
+You might need to integrate your project with different services or platforms.
