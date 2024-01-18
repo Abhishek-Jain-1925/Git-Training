@@ -1,5 +1,5 @@
 Git Basics - Assignment No.1
-Name : Mr.Abhishek Sachin Dhondalkar
+Name : Mr.Abhishek Sachin Dhondalkar.
 
 Used Commands to Perform Mentioned Task are as Follows-
 1) git init - To Initialize Repository/Directory.
