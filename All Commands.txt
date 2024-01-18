@@ -15,7 +15,7 @@ Used Commands to Perform Mentioned Task are as Follows-
 
 9) git checkout -b BRANCH_NAME - To Create a New Branch.
 10) git branch -m NEW_NAME - To Rename a Branch.
-11) git log - To get List of Commits on Particular Branch.
+11) git log - To get List of Commits on Particular Branch..
 12) git reset --soft HEAD~1 - To Revert the Changes in File which was Committed and put that file in Staged Area.
 13) git reset --hard HEAD~1 - To Revert the Changes of File Pemanantly.
 14) git stash - To Save file locally on Machine.
